@@ -3,32 +3,31 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex">
-  <title>Nitro prank</title>
-  <meta property="og:title" content="You've been pranked!">
-  <meta property="og:description" content="PARODY • This is not a real Discord Nitro gift. Open the surprise to see the joke.">
+  <title>Discord gift preview</title>
+  <meta property="og:title" content="You've been gifted a subscription!">
+  <meta property="og:description" content="A Discord-style gift preview.">
   <meta property="og:image" content="https://iam-steveee.github.io/free-nitro/assets/nitro.png">
-  <meta name="theme-color" content="#b96acb">
+  <meta name="theme-color" content="#0b0b0d">
 
-  <!-- Discord Component Embed: clearly marked as a parody, not a real gift. -->
   <script id="discord:component-embed" type="application/json">
   {
     "component": {
       "type": 17,
       "components": [
         {
-          "type": 10,
-          "content": "## You've been pranked!\n**PARODY • This is not a real Discord Nitro gift.**\n\nA little surprise from <@949872550274547734>.\n\n[Open surprise (Rickroll)](https://discord.com/vanityurl/dotcom/steakpants/flour/flower/index11.html)"
-        },
-        {
-          "type": 12,
-          "items": [
+          "type": 9,
+          "components": [
             {
-              "media": {
-                "url": "https://iam-steveee.github.io/free-nitro/assets/nitro.png"
-              }
+              "type": 10,
+              "content": "# You've been gifted a subscription!\n\n<@949872550274547734> has gifted you a nitro for **1 month**!\n\nExpires in 30 minutes."
             }
-          ]
+          ],
+          "accessory": {
+            "type": 11,
+            "media": {
+              "url": "https://iam-steveee.github.io/free-nitro/assets/nitro.png"
+            }
+          }
         },
         {
           "type": 1,
@@ -36,7 +35,7 @@
             {
               "type": 2,
               "style": 5,
-              "label": "Open surprise (Rickroll)",
+              "label": "Accept",
               "url": "https://discord.com/vanityurl/dotcom/steakpants/flour/flower/index11.html"
             }
           ]
@@ -47,8 +46,8 @@
   </script>
 
   <script>
-    // Direct browser visits are redirected. The Discord preview itself clearly
-    // labels this as a parody and does not claim to redeem a Nitro subscription.
+    // Direct visits go to the joke destination; Discord can still read the
+    // component-embed metadata from the initial HTML response.
     window.location.replace("https://discord.com/vanityurl/dotcom/steakpants/flour/flower/index11.html");
   </script>
 </head>
